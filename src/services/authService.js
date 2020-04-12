@@ -1,9 +1,8 @@
 import http from './httpService';
-import { apiUrl } from '../config.json';
 import jwtDecode from 'jwt-decode';
 
 const tokenJwtKey = 'token';
-const apiEndpoint = `${apiUrl}/auth`;
+const apiEndpoint = `/auth`;
 
 //Setting the jwt for all http requests to prevent bi direction dependency.
 http.setJwt(getJwt());
